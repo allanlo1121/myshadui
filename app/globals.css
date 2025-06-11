@@ -3,6 +3,8 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@import "./themes.css";
+
 /* noto-sans-sc-100 - chinese-simplified_latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -196,6 +198,8 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+
+
 
 @layer base {
   * {

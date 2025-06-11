@@ -1,6 +1,6 @@
 
 import { dayProgressData } from '@/lib/data'
-import { ChartAreaInteractive } from '@/components/charts/ChartAreaInteractive'
+import { ChartAreaInteractive } from '@/components/charts/chart-area-interactive'
 
 import React from 'react'
 

@@ -1,4 +1,4 @@
-import { inter } from "./fonts";
+
 
 export default function CrecLogo() {
   return (

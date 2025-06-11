@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
+import { Area, AreaChart, CartesianGrid, XAxis, LabelList } from "recharts"
 
 import {
   Card,
@@ -134,11 +134,11 @@ const chartConfig = {
   },
   completed: {
     label: "Completed",
-    color: "var(--chart-1)",
+    color: "var(--primary)",
   },
   plan: {
     label: "Plan",
-    color: "var(--chart-2)",
+    color: "red",
   },
 } satisfies ChartConfig
 
@@ -163,9 +163,9 @@ export function ChartAreaInteractive({ data }: { data: IProgressData[] }) {
     <Card className="pt-0">
       <CardHeader className="flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
         <div className="grid flex-1 gap-1">
-          <CardTitle>Area Chart - Interactive</CardTitle>
+          <CardTitle>盾构进度</CardTitle>
           <CardDescription>
-            Showing total visitors for the last 3 months
+            可以展示最近三个月完成情况
           </CardDescription>
         </div>
         <Select value={timeRange} onValueChange={setTimeRange}>
@@ -254,15 +254,22 @@ export function ChartAreaInteractive({ data }: { data: IProgressData[] }) {
               type="natural"
               fill="url(#transparent)"
               stroke="var(--color-plan)"
-
+              dot={true}
             />
             <Area
               dataKey="completed"
               type="natural"
               fill="url(#fillCompleted)"
               stroke="var(--color-completed)"
+              dot={true}
 
-            />
+            >
+              <LabelList
+                dataKey="completed"
+                position="bottom"       // 字体位置在点的正下方
+                fill="var(--color-muted)"
+                fontSize={12}
+              /> </Area>
             <ChartLegend content={<ChartLegendContent />} />
           </AreaChart>
         </ChartContainer>

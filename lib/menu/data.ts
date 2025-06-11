@@ -4,35 +4,79 @@ import {
     Home,
     Settings,
     HardDrive,
-    FileText,
+    Factory,
     BarChart3,
     User,
+    AudioWaveform,
+    Command,
+    Monitor,          // 实时监控
+    FileText,         // 报表
+    CalendarCheck,    // 考勤
+    Frame,
+    PieChart,
+    Navigation,
 } from "lucide-react";
+import { CrecLogoIcon } from '@/components/icons/crec-logo';
+import CrecLogo from '@/components/app_ui/crec-logo';
 import { SidebarConfig } from "./types"; // 你也可以放在 utils/types.ts 等位置
 
 export const sidebarData: SidebarConfig = {
-    versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
+    user: {
+        name: "chengtong",
+        email: "m@example.com",
+        avatar: "/avatars/chengtong.jpg",
+    },
+    teams: [
+        {
+            name: "城通公司",
+            logo: CrecLogo,
+            plan: "Enterprise",
+        },
+        {
+            name: "XX项目",
+            logo: AudioWaveform,
+            plan: "Startup",
+        },
+        {
+            name: "XX工区",
+            logo: Command,
+            plan: "Free",
+        },
+    ],
+
     navMain: [
         {
-            title: "主页",
-            url: "/dashboard",
+            title: "首页",
+            url: "/production-center",
             icon: LayoutDashboard,
-            items: [
-                { title: "总体情况", url: "/dashboard", icon: User },
-                { title: "个人情况", url: "#", icon: Settings },
-            ],
         },
         {
             title: "指挥中心",
             url: "/production-center",
-            icon: HardDrive,
-            items: [
-                { title: "总览", url: "/production-center", icon: LayoutDashboard },
-                { title: "施工进度", url: "/production-center/construction-progress", icon: Folder },
-                { title: "任务调度", url: "/production-center/task-dispatch", icon: FileText },
-                { title: "项目监控", url: "/production-center/project-monitor", icon: BarChart3 },
-                { title: "施工报表", url: "/production-center/data-report", icon: FileText },
-            ],
+            icon: Factory,
+            items:
+                [
+                    {
+                        title: '总览',
+                        url: '/production-center',
+                        icon: LayoutDashboard,    // 总览
+                    },
+                    {
+                        title: '盾构监控',
+                        url: '/production-center/project-monitor',
+                        icon: Monitor,             // 实时监控 → Monitor 图标 :contentReference[oaicite:1]{index=1}
+                    },
+                    {
+                        title: '施工报表',
+                        url: '/production-center/data-report',
+                        icon: FileText,            // 施工报表 → FileText 图标
+                    },
+                    {
+                        title: '人员考勤',
+                        url: '/production-center/attendance',
+                        icon: CalendarCheck,       // 人员考勤 → CalendarCheck 图标 :contentReference[oaicite:2]{index=2}
+                    },
+                ],
         },
         {
             title: "资源中心",
@@ -58,4 +102,23 @@ export const sidebarData: SidebarConfig = {
             ],
         },
     ],
+    projects: [
+        {
+            name: "Design Engineering",
+            url: "#",
+            icon: Frame,
+        },
+        {
+            name: "Sales & Marketing",
+            url: "#",
+            icon: PieChart,
+        },
+        {
+            name: "Travel",
+            url: "#",
+            icon: Navigation,
+        },
+    ],
 };
+
+
