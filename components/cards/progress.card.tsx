@@ -26,7 +26,7 @@ export function ProgressCard({ title, current, previous, plan }: ProgressCardPro
         <Card className="@container/card">
             <CardHeader>
                 <CardDescription>{title}</CardDescription>
-                <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+                <CardTitle className="text-xl font-semibold tabular-nums @[250px]/card:text-3xl">
                     {current} 环
                 </CardTitle>
                 <CardAction>

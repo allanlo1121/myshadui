@@ -431,3 +431,134 @@
     --spacing: 0.222222rem;
   }
 }
+
+.theme-brand {
+  /* 圆角 */
+  --radius: 0.65rem;
+
+  /* 基础色板 */
+  --primary-100: #006cbc; /* 100% */
+  --primary-90: #1076c1; /* 90% */
+  --primary-80: #2982c7; /* 80% */
+  --primary-70: #428ecd; /* 70% */
+  --primary-60: #5c9bd3; /* 60% */
+  --primary-50: #75a7d8; /* 50% */
+  --primary-40: #90b6df; /* 40% */
+  --primary-30: #9ec2e5; /* 30% */
+  --primary-20: #b8d1eb; /* 20% */
+  --primary-10: #e2eef8; /* 10% */
+
+  /* 辅助色 */
+  --accent-1: oklch(0.967 0.001 286.375); /* Pantone 281C / R10G29B100 */
+  --accent-2: #b10012; /* Pantone 1805C / R177G0B18 */
+  --accent-3: #0a1d64; /* Pantone 877C / 银 */
+
+  /* 文本/背景对比色 */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+
+  /* 组件卡片、弹层 */
+  --card-background: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover-background: #ffffff;
+  --popover-foreground: #1a1a1a;
+
+  /* 主要交互色 */
+  --primary: var(--primary-100);
+  --primary-foreground: #ffffff;
+
+  /* 次要交互色（可用 70% 或 80% 等） */
+  --secondary: var(--primary-70);
+  --secondary-foreground: #ffffff;
+
+  /* 静默（灰度） */
+  --muted: #f4f5f6;
+  --muted-foreground: #6b7280;
+
+  /* 辅助强调色 */
+  --accent: var(--accent-1);
+  --accent-foreground: #ffffff;
+
+  /* 危险/删除色，使用辅助色 2 */
+  --destructive: var(--accent-2);
+  --destructive-foreground: #ffffff;
+
+  /* 新增：警示色（黄色） */
+  --warning: #ffc107;
+  --warning-foreground: #1a1a1a;
+
+  /* 新增：成功色（绿色） */
+  --success: #28a745;
+  --success-foreground: #ffffff;
+
+  /* 图表色板扩展： */
+
+  /* 边框、输入框背景、环线 */
+  --border: #e5e7eb;
+  --input-background: #ffffff;
+  --ring: var(--primary-100);
+
+  /* 图表色板：可按需扩展或重排 */
+  --chart-1: var(--primary-80);
+  --chart-2: var(--primary-60);
+  --chart-3: var(--accent-1);
+  --chart-6: var(--accent-2);
+  --chart-7: var(--accent-3);
+  --chart-5: var(--warning);
+  --chart-4: var(--success);
+
+  /* 侧边栏风格 */
+  --sidebar-background: #f9fafb;
+  --sidebar-foreground: #374151;
+  --sidebar-primary: var(--primary-100);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--accent-1);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: var(--primary-100);
+
+  /* 深色模式变体 */
+  @variant dark {
+    --background: #1a1a1a;
+    --foreground: #f4f5f6;
+
+    --card-background: #2a2a2a;
+    --card-foreground: #f4f5f6;
+    --popover-background: #2a2a2a;
+    --popover-foreground: #f4f5f6;
+
+    --primary: var(--primary-100);
+    --primary-foreground: #ffffff;
+
+    --secondary: var(--primary-70);
+    --secondary-foreground: #ffffff;
+
+    --muted: #374151;
+    --muted-foreground: #d1d5db;
+
+    --accent: var(--accent-1);
+    --accent-foreground: #ffffff;
+
+    --destructive: var(--accent-2);
+    --destructive-foreground: #ffffff;
+
+    --border: #4b5563;
+    --input-background: #1f2937;
+    --ring: var(--primary-100);
+
+    --chart-1: var(--primary-80);
+    --chart-2: var(--primary-60);
+    --chart-3: var(--accent-1);
+    --chart-4: var(--accent-2);
+    --chart-5: var(--accent-3);
+
+    --sidebar-background: #111827;
+    --sidebar-foreground: #d1d5db;
+    --sidebar-primary: var(--primary-100);
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: var(--accent-1);
+    --sidebar-accent-foreground: #ffffff;
+    --sidebar-border: #4b5563;
+    --sidebar-ring: var(--primary-100);
+  }
+}

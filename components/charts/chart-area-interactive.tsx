@@ -134,11 +134,11 @@ const chartConfig = {
   },
   completed: {
     label: "Completed",
-    color: "var(--primary)",
+    color: "var(--chart-1)",
   },
   plan: {
     label: "Plan",
-    color: "red",
+    color: "var(--chart-5)",
   },
 } satisfies ChartConfig
 
@@ -191,7 +191,7 @@ export function ChartAreaInteractive({ data }: { data: IProgressData[] }) {
       <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer
           config={chartConfig}
-          className="aspect-auto h-[250px] w-full"
+          className="aspect-auto h-[200px] w-full"
         >
           <AreaChart data={filteredData}>
             <defs>
@@ -267,10 +267,10 @@ export function ChartAreaInteractive({ data }: { data: IProgressData[] }) {
               <LabelList
                 dataKey="completed"
                 position="bottom"       // 字体位置在点的正下方
-                fill="var(--color-muted)"
+                fill="var(--text-foreground)"
                 fontSize={12}
               /> </Area>
-            <ChartLegend content={<ChartLegendContent />} />
+            {/* <ChartLegend content={<ChartLegendContent />} /> */}
           </AreaChart>
         </ChartContainer>
       </CardContent>
